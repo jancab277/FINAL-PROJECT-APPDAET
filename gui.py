@@ -71,7 +71,7 @@ class TaylorApp:
         root.title("Taylor Series Mathematical Explorer")
         root.geometry("1150x720")
 
-        self.label_to_key = {cfg["label"]: key for key, cfg in FUNCTIONS.items()}
+        self.label_to_key = {str(cfg["label"]): key for key, cfg in FUNCTIONS.items()}
         self.func_var = tk.StringVar(value=next(iter(self.label_to_key)))
         self.x_var = tk.StringVar(value="1")
         self.n_var = tk.StringVar(value="3")

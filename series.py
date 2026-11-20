@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # series.py -- core algorithm (student-written)
 # No math.exp / log / sin / cos / tan is used here.
 # Each term is built from the previous term, so no big factorials are needed.
@@ -90,7 +89,7 @@ def approximate(func, x, n):
     total = 0
     for term in generate_terms(func, x, n):
         total = total + term
-=======
+
 # series.py -- core algorithm (student-written)
 # No math.exp / log / sin / cos / tan is used here.
 # Each term is built from the previous term, so no big factorials are needed.
@@ -182,5 +181,5 @@ def approximate(func, x, n):
     total = 0
     for term in generate_terms(func, x, n):
         total = total + term
->>>>>>> 6c014a15406661b9f81dbb4d28ec8015cb00845c
+
     return total
