@@ -1,10 +1,12 @@
 from validation import validate_inputs
 from series import generate_terms, partial_sums
 from reference import reference_value, absolute_error
+from formatter import (term_formulas, series_general, series_n_terms,
+                       series_substituted, series_evaluated)
 
 
-def build_term_rows(terms, sums):
-    return [(i, t, s) for i, (t, s) in enumerate(zip(terms, sums), start=1)]
+def build_term_rows(terms, sums, formulas):
+    return [(i, f, t, s) for i, (f, t, s) in enumerate(zip(formulas, terms, sums), start=1)]
 
 
 def run_calculation(func, x_text, n_text):
@@ -21,4 +23,9 @@ def run_calculation(func, x_text, n_text):
         "error": absolute_error(approx, reference),
         "terms": terms,
         "sums": sums,
+        "formulas": term_formulas(func, n),
+        "general": series_general(func),
+        "n_terms_text": series_n_terms(func, n),
+        "substituted": series_substituted(func, x, n),
+        "evaluated": series_evaluated(terms, approx),
     }
