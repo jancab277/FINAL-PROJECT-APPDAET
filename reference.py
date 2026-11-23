@@ -1,11 +1,11 @@
 import math
 
 _REFERENCE_FUNCTIONS = {
-    "e^x": math.exp,
-    "sin(x)": math.sin,
-    "cos(x)": math.cos,
-    "ln(x)": math.log,
-    "tan(x)": math.tan,
+    "exp": math.exp,
+    "ln": math.log,
+    "sin": math.sin,
+    "cos": math.cos,
+    "tan": math.tan,
 }
 
 
